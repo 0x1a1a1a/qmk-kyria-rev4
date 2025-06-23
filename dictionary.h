@@ -46,58 +46,58 @@ enum custom_keycodes {
 #define TAB_R    G(S(KC_RBRC))                 // Go to the next tab
 
 // Special characters: Brackets
-#define L_RND    MEH(KC_A)                     // Left Parenthesis (round bracket)
-#define R_RND    MEH(KC_B)                     // Right Parenthesis (round bracket)
-#define L_SQR    MEH(KC_C)                     // Left Square Bracket
-#define R_SQR    MEH(KC_D)                     // Right Square Bracket
-#define L_CUR    MEH(KC_E)                     // Left Curly Bracket (brace)
-#define R_CUR    MEH(KC_F)                     // Right Curly Bracket (brace)
-#define L_ANG    MEH(KC_G)                     // Less-Than Sign (left angle bracket) (chevron)
-#define R_ANG    MEH(KC_H)                     // Greater-Than Sign (right angle bracket) (chevron)
+#define L_RND    A(KC_A)                       // Left Parenthesis (round bracket)
+#define R_RND    A(KC_B)                       // Right Parenthesis (round bracket)
+#define L_SQR    A(KC_C)                       // Left Square Bracket
+#define R_SQR    A(KC_D)                       // Right Square Bracket
+#define L_CUR    A(KC_E)                       // Left Curly Bracket (brace)
+#define R_CUR    A(KC_F)                       // Right Curly Bracket (brace)
+#define L_ANG    A(KC_COMMA)                   // Less-Than Sign (left angle bracket) (chevron)
+#define R_ANG    A(KC_DOT)                     // Greater-Than Sign (right angle bracket) (chevron)
 
 //Special characters: Punctuation
-#define COMMA    MEH(KC_I)                     // Comma
-#define PERIOD   MEH(KC_J)                     // Period
-#define QMARK    MEH(KC_K)                     // Question mark
-#define EMARK    MEH(KC_L)                     // Exclamation mark
-#define COLON    MEH(KC_M)                     // Colon
-#define SMCOLON  MEH(KC_N)                     // Semicolon
+#define COMMA    A(KC_I)                       // Comma
+#define PERIOD   A(KC_J)                       // Period
+#define QMARK    A(KC_PPLS)                    // Question mark
+#define EMARK    A(KC_PMNS)                    // Exclamation mark
+#define COLON    A(KC_M)                       // Colon
+#define SMCOLON  A(KC_N)                       // Semicolon
 
 //Special characters
-#define APOSTR   MEH(KC_O)                     // Apostrophe
-#define DQUOT    MEH(KC_P)                     // Quotation Mark
-#define GACCENT  MEH(KC_Q)                     // Grave Accent
-#define L_SQM    MEH(KC_R)                     // Left Single Quotation Mark
-#define R_SQM    MEH(KC_S)                     // Right Single Quotation Mark
-#define L_DQM    MEH(KC_T)                     // Left Double Quotation Mark
-#define R_DQM    MEH(KC_U)                     // Right Double Quotation Mark
+#define APOSTR   A(KC_O)                       // Apostrophe
+#define DQUOT    A(KC_Q)                       // Quotation Mark
+#define GACCENT  A(KC_PAST)                    // Grave Accent
+#define L_SQM    A(KC_R)                       // Left Single Quotation Mark
+#define R_SQM    A(KC_S)                       // Right Single Quotation Mark
+#define L_DQM    A(KC_T)                       // Left Double Quotation Mark
+#define R_DQM    A(KC_U)                       // Right Double Quotation Mark
 
 //Special characters
-#define SOL      MEH(KC_V)                     // Solidus (Slash)
-#define RSOL     MEH(KC_W)                     // Reverse Solidus (Backslash)
-#define VLINE    MEH(KC_X)                     // Vertical Line
-#define MSIGN    MEH(KC_Y)                     // Multiplication Sign
-#define TILDE    MEH(KC_Z)                     // Tilde
+#define SOL      A(S(KC_V))                    // Solidus (Slash)
+#define RSOL     A(KC_W)                       // Reverse Solidus (Backslash)
+#define VLINE    A(KC_X)                       // Vertical Line
+#define MSIGN    A(KC_Y)                       // Multiplication Sign
+#define TILDE    A(KC_Z)                       // Tilde
 
 //Special characters
-#define HYPHEN   MEH(KC_0)                     // Hyphen-Minus (Hyphen)
-#define UNDRSC   MEH(KC_1)                     // Low Line (Underscore)
-#define NDASH    MEH(KC_2)                     // En Dash
-#define MDASH    MEH(KC_3)                     // Em Dash
-#define HLINE    MEH(KC_4)                     // Horizontal Bar
-#define MDOT     MEH(KC_5)                     // Middle Dot
-#define BUL      MEH(KC_6)                     // Bullet
-#define WBUL     MEH(KC_7)                     // White Bullet
-#define DEGREE   MEH(KC_8)                     // Degree Sign
-#define PRCNT    MEH(KC_9)                     // Percent Sign
+#define HYPHEN   A(KC_0)                       // Hyphen-Minus (Hyphen)
+#define UNDRSC   A(KC_1)                       // Low Line (Underscore)
+#define NDASH    A(KC_2)                       // En Dash
+#define MDASH    A(KC_3)                       // Em Dash
+#define HLINE    A(KC_4)                       // Horizontal Bar
+#define MDOT     A(KC_5)                       // Middle Dot
+#define BUL      A(KC_6)                       // Bullet
+#define WBUL     A(KC_7)                       // White Bullet
+#define DEGREE   A(KC_8)                       // Degree Sign
+#define PRCNT    A(KC_9)                       // Percent Sign
 
 //Special characters
-#define DLLR     MEH(KC_MINS)                  // Dollar Sign
-#define HRVN     MEH(KC_SLSH)                  // Hryvnia Sign
-#define ATSGN    MEH(KC_BSLS)                  // Commercial At (at sign)
-#define NMBR     MEH(KC_EQL)                   // Number Sign
-#define CARET    MEH(KC_LBRC)                  // Circumflex Accent (Caret)
-#define AMPRD    MEH(KC_RBRC)                  // Ampersand
+#define DLLR     A(KC_MINS)                    // Dollar Sign
+#define HRVN     A(KC_PEQL)                    // Hryvnia Sign
+#define ATSGN    A(KC_BSLS)                    // Commercial At (at sign)
+#define NMBR     A(KC_EQL)                     // Number Sign
+#define CARET    A(KC_LBRC)                    // Circumflex Accent (Caret)
+#define AMPRD    A(KC_RBRC)                    // Ampersand
 
 // Home row mods (as mod-taps)
 #define _CTL_A   LCTL_T(KC_A)
@@ -110,24 +110,24 @@ enum custom_keycodes {
 #define _CTL_SC  RCTL_T(KC_SCLN)
 
 // macOS shortcuts
-#define RCAST    MEH(KC_PPLS)                  // Run Raycast
-#define EMOJI    C(G(KC_SPC))                  // Emoji & Symbols. Not reassignable
-#define SS_OPT   MEH(KC_PMNS)                  // Screenshot and recording options
-#define DND      MEH(KC_PAST)                  // Do Not Disturb
-#define MCTRL    MEH(KC_KP_3)                  // Mission Control
+#define RCAST    C(G(KC_PPLS))                 // Run Raycast
+#define EMOJI    C(G(KC_SPC))                  // Emoji & Symbols (via Raycast)
+#define SCR      C(G(KC_PMNS))                 // Screenshot and recording options
+#define DND      C(G(KC_PAST))                 // Do Not Disturb
+#define MCTRL    C(G(KC_KP_3))                 // Mission Control
 
 // macOS shortcuts
 #define UNDO     G(KC_Z)                       // Undo
-#define REDO     G(S(KC_Z))                    // Redo
+#define REDO     S(G(KC_Z))                    // Redo
 #define CUT      G(KC_X)                       // Cut
 #define COPY     G(KC_C)                       // Copy
 #define PASTE    G(KC_V)                       // Paste
 #define XPASTE   G(A(S(KC_V)))                 // Paste and Match Style
 #define SELALL   G(KC_A)                       // Select all
 #define HIDE     G(KC_H)                       // Hide current app
-#define MINIM    G(KC_M)                       // Minimized current window
+#define MINIM    G(KC_M)                       // Minimize current window
 
 // macOS shortcuts
-#define PROF1    G(S(C(KC_A)))                 // Select Profile 1 in Google Chrome
-#define PROF2    G(S(C(KC_B)))                 // Select Profile 2 in Google Chrome
-#define PROF3    G(S(C(KC_C)))                 // Select Profile 3 in Google Chrome
+#define DESK1    C(G(KC_A))                    // Select Desktop 1
+#define DESK2    C(G(KC_B))                    // Select Desktop 2
+#define DESK3    C(G(KC_C))                    // Select Desktop 3
