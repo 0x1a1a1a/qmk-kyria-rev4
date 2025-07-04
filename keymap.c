@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                             KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
           COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                                             KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
           QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,________,________,     ________,________,    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                  ________,  LTR_EN,TO(_CT1),  KC_SPC,  KC_DEL,     ________, KC_BSPC,TO(_CT2),  LTR_UA,________
+                                  ________,  LTR_EN,TO(_CT1),  KC_SPC,TO(_NAV),       KC_DEL, KC_BSPC,TO(_CT2),  LTR_UA,________
     ),
 
 
@@ -63,7 +63,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer: Controls 1
     [_CT1] = LAYOUT(
-         KC_VOLU,    HIDE,   MINIM,   MCTRL,TO(_NAV),   RCAST,                                        ________,   DESK1,   DESK2,   DESK3,________, KC_BRIU,
+         KC_VOLU,   MCTRL,   DESK1,   DESK2,   DESK3,   RCAST,                                        ________,    HIDE,   MINIM,________,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                                        ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
           KC_DEL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
@@ -72,9 +72,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer: Controls 2
     [_CT2] = LAYOUT(
-        ________,________,________,________,________,________,                                             DND,TO(_SPC),________,________,________,________,
-        ________,________,________,________,________,________,                                             SCR,TO(_NUM),________,________,________,________,
-        ________,________,________,________,________,________, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
+        ________, UG_VALD, UG_VALU, UG_PREV, UG_NEXT, UG_TOGG,                                             DND,TO(_SPC),________,________,________,________,
+        ________, UG_SPDD, UG_SPDU, UG_HUED, UG_HUEU,________,                                             SCR,TO(_NUM),________,________,________,________,
+        ________,________,________, UG_SATD, UG_SATU,________, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 

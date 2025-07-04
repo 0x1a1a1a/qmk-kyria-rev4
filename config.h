@@ -14,3 +14,5 @@
 #define TAPPING_TERM 190
 
 #define NKRO_DEFAULT_ON true
+
+#define RGBLIGHT_SLEEP
