@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer: Controls 1
     [_CT1] = LAYOUT(
-         KC_VOLU,________,    HIDE,   MINIM,   MCTRL,   RCAST,                                        ________,   DESK1,   DESK2,   DESK3,________, KC_BRIU,
+         KC_VOLU,    LOCK,    HIDE,   MINIM,   MCTRL,   RCAST,                                        ________,   DESK1,   DESK2,   DESK3,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                                        ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
           KC_DEL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
