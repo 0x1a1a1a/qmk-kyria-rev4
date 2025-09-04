@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
           R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                             KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
           COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                                             KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
           QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   MINIM,    HIDE,     TO(_NUM),TO(_SPC),    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
-                                  ________,TO(_NAV),  LTR_EN,TO(_CT1),  KC_SPC,      KC_BSPC,TO(_CT2),  LTR_UA,  KC_DEL,________
+                                     MCTRL,TO(_NAV),  LTR_EN,TO(_CT1),  KC_SPC,      KC_BSPC,TO(_CT2),  LTR_UA,  KC_DEL,________
     ),
 
     // Layer: Navigation
@@ -62,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer: Controls 1
     [_CT1] = LAYOUT(
-         KC_VOLU,    LOCK,    HIDE,   MINIM,   MCTRL,   RCAST,                                        ________,   DESK1,   DESK2,   DESK3,________, KC_BRIU,
+         KC_VOLU,    HIDE,   MINIM,   DESKL,   DESKR,   RCAST,                                        ________,________,________,________,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                                        ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-          KC_DEL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
+            LOCK,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
