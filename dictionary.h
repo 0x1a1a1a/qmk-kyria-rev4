@@ -115,7 +115,7 @@ enum custom_keycodes {
 #define SCR      C(G(KC_PMNS))                 // Screenshot and recording options
 #define DND      C(G(KC_PAST))                 // Do Not Disturb
 #define MCTRL    C(G(KC_KP_3))                 // Mission Control
-#define LOCK     C(G(KC_Q))                    // Lock screen
+#define SLEEP    C(G(KC_KP_4))                 // Sleep
 
 // macOS shortcuts
 #define UNDO     G(KC_Z)                       // Undo
