@@ -7,11 +7,11 @@
 // Include keyboard-specific headers instead of <keyboard.h>
 #include QMK_KEYBOARD_H
 
-
 // Include headers and other components
 #include "dictionary.h"
 #include "macros.c"
 
+bool is_turbo_mouse = false;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -20,14 +20,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LTR] = LAYOUT(
           R_SQM,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                             KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  HYPHEN,
           COMMA,  _CTL_A,  _SFT_S,  _OPT_D,  _CMD_F,    KC_G,                                             KC_H,  _CMD_J,  _CMD_K,  _SFT_L, _CTL_SC,  PERIOD,
-          QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,   MINIM,    HIDE,     TO(_NUM),TO(_SPC),    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
+          QMARK,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,  TTURBO, KC_TRNS,     TO(_NUM),TO(_SPC),    KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   EMARK,
                                   ________,TO(_NAV),  LTR_EN,TO(_CT1),  KC_SPC,      KC_BSPC,TO(_CT2),  LTR_UA,  KC_DEL,________
     ),
 
     // Layer: Navigation
     [_NAV] = LAYOUT(
         TO(_NMT), M_LIN_L, M_WRD_L,   KC_UP, M_WRD_R, M_LIN_R,                                        ________,________,________,________,________,________,
-           TAB_L,   TAB_R, KC_LEFT, KC_DOWN, KC_RGHT,________,                                        ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
+        ________,________, KC_LEFT, KC_DOWN, KC_RGHT,________,                                        ________, KC_LCMD, KC_LOPT, KC_LSFT, KC_LCTL,________,
         ________,  SWRD_L,  SSYM_L,________,  SSYM_R,  SWRD_R, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
@@ -62,9 +62,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     // Layer: Controls 1
     [_CT1] = LAYOUT(
-         KC_VOLU,    HIDE,   MINIM,   DESKL,   DESKR,   RCAST,                                           SLEEP,________,________,________,________, KC_BRIU,
+         KC_VOLU,    HIDE,   MINIM,   DESKL,   DESKR,   RCAST,                                        ________,________,________,________,________, KC_BRIU,
          KC_VOLD,  SELALL,  KC_ESC,  KC_TAB,  KC_ENT,   EMOJI,                                        ________, KC_RCMD, KC_ROPT, KC_RSFT, KC_RCTL, KC_BRID,
-           MCTRL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
+           MCTRL,    UNDO,     CUT,    COPY,   PASTE,  XPASTE, KC_TRNS, QK_BOOT,     KC_TRNS, KC_TRNS,________,________,________,________,________,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
@@ -73,9 +73,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_CT2] = LAYOUT(
         ________, UG_VALD, UG_VALU, UG_PREV, UG_NEXT, UG_TOGG,                                             DND,TO(_SPC),________,________,________,________,
         ________, UG_SPDD, UG_SPDU, UG_HUED, UG_HUEU,________,                                             SCR,TO(_NUM),________,________,________,________,
-        ________,________,________, UG_SATD, UG_SATU,________, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS,  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
+        ________,________,________, UG_SATD, UG_SATU,________, KC_TRNS, KC_TRNS,     QK_BOOT, KC_TRNS,  KC_DEL, LTR_CMD, LTR_OPT, LTR_SFT, LTR_CTL,________,
                                     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
 
 };
+
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+  if (!is_turbo_mouse) {
+    mouse_report.x /= 2.5;
+    mouse_report.y /= 2.5;
+  } else {
+    mouse_report.x *= 2;
+    mouse_report.y *= 2;
+    }
+
+    mouse_report.v = -mouse_report.v;
+    return mouse_report;
+}

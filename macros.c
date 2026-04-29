@@ -2,6 +2,7 @@
 // Macros
 //
 
+extern bool is_turbo_mouse;
 
 // Change language and switch to a layer with letters
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
@@ -25,6 +26,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         layer_move(_LTR);
       }
       break;
+
+      case TTURBO:
+        if (record->event.pressed) {
+          is_turbo_mouse = true;
+        } else {
+          is_turbo_mouse = false;
+        }
+        return false;
   }
   return true;
 };

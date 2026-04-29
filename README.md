@@ -1,10 +1,12 @@
 # Keymap for Halcyon Kyria (rev4) from splitkb.com
 
 ## Changelog
+v1.8 - Expanded support of Cirque trackpad module
+v1.7 - Added support of Cirque trackpad module
 v1.6 - Added a key for “Sleep”
 
 ## Installation
-1. Install QMK with `brew install qmk`
+1. Install QMK with `brew tap qmk/qmk` and `brew install qmk`
 2. Install correct version of Python with `brew install python@3.13`
 3. Go to `cd ~/-repos` and run `qmk setup`
 4. Select option to clone the `qmk_firmware` repository

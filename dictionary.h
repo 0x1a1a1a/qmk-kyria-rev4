@@ -24,6 +24,7 @@ enum custom_keycodes {
   LTR_OPT,
   LTR_SFT,
   LTR_CTL,
+  TTURBO
 };
 
 // Aliases: 8-symbol underscores for disabled keys instead of "KC_NO" and "XXXXXXX"
@@ -115,7 +116,7 @@ enum custom_keycodes {
 #define SCR      C(G(KC_PMNS))                 // Screenshot and recording options
 #define DND      C(G(KC_PAST))                 // Do Not Disturb
 #define MCTRL    C(G(KC_KP_3))                 // Mission Control
-#define SLEEP    C(G(KC_KP_4))                 // Sleep
+#define SLEEP    C(G(KC_KP_SLASH))             // Sleep
 
 // macOS shortcuts
 #define UNDO     G(KC_Z)                       // Undo
@@ -134,3 +135,5 @@ enum custom_keycodes {
 #define DESK3    C(G(KC_C))                    // Select Desktop 3
 #define DESKL    C(G(KC_D))                    // Move left a space
 #define DESKR    C(G(KC_E))                    // Move right a space
+
+#define TURBO
