@@ -14,6 +14,7 @@ enum layers {
   _NUM = 4,                                    // Numpad. Should be above “Navigation” layer for accessibiIty
   _CT1 = 5,                                    // macOS shortcuts. Should be above other layers for accessibility from any of them
   _CT2 = 6,                                    // macOS shortcuts. Should be above other layers for accessibility from any of them
+  _MS1 = 7,
 };
 
 // Aliases: Language switch
