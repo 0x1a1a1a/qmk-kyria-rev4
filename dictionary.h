@@ -128,7 +128,7 @@ enum custom_keycodes {
 #define XPASTE   G(A(S(KC_V)))                 // Paste and Match Style
 #define SELALL   G(KC_A)                       // Select all
 #define HIDE     G(KC_H)                       // Hide current app
-#define MINIM    G(KC_M)                       // Minimize current window
+// #define MINIM   G(KC_M)                       // Minimize current window
 
 // macOS shortcuts
 #define DESK1    C(G(KC_A))                    // Select Desktop 1
